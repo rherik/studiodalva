@@ -23,7 +23,7 @@ function Index() {
           <img src={Aimagem} alt="" />
       </div>
 
-      <aside className='w-96 static right-2 py-4'>
+      {/* <aside className='w-96 static right-2 py-4'>
         <div className='flex flex-col text-3xl p-2'>
           <p className='text-black'>Concorra a R$100.000,00 ou uma Fastback T200!</p> 
           <p className='font-bold text-green-700'>O site escolhe números aleatórios para você.</p>
@@ -70,7 +70,7 @@ function Index() {
             Ver meus números
           </button>
           </a>
-      </aside>
+      </aside> */}
     </main>
   )
 }

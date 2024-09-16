@@ -1,18 +1,22 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+import Cadastro from './Cadastro.jsx'
 import './index.css'
 import Home from './home.jsx'
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Catalogo from './Catalogo.jsx'
 
 const router = createBrowserRouter([
   {
-  path: "/cadastro",
-  element: <App />,
-  }, {
+    path: "/cadastro",
+    element: <Cadastro />,
+  },  {
+    path: "/catalogo",
+    element: <Catalogo />,
+    }, {
   path: "/",
   element: <Home />,
   },
