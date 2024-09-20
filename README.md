@@ -9,10 +9,14 @@
 
 ## Implementações
 
-- Adicionar ícone de whatsapp à aba *Agende sua avaliação*
-- NavBar responsiva com menu de hamburguer
-- Slider cards na aba Catálogo
-- Comprar domínio no google
-- Ajeitar tamanho na homepage
-- Adicionar google maps à aba *Como chegar*
-- Criar página *Sobre*
+&#9745; NavBar responsiva com menu de hamburguer
+
+&#9744; Slider cards na aba Catálogo
+
+&#9744; Comprar domínio no google
+
+&#9744; Ajeitar tamanho na homepage
+
+&#9744; Adicionar google maps à aba *Como chegar*
+
+&#9744; Criar página *Sobre*
