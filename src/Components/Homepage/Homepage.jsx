@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Aimagem from '../../assets/dc_logo.png'
-
+import Catalogo from '../Catalogo/Catalogo'
 
 export default function Homepage() {
   const [count, setCount] = useState(0);
@@ -18,8 +18,8 @@ export default function Homepage() {
   };
 
   return (
-    <main className='flex flex-row justify-around bg-white static p-2 w-full'>
-      <div className='left-2'>
+    <main className=''>
+      <div className='flex flex-row justify-around bg-white static p-2 w-full left-2' id='home'>
           <img src={Aimagem} alt="" className='w-[400px]' />
       </div>
 
@@ -71,6 +71,7 @@ export default function Homepage() {
           </button>
           </a>
       </aside> */}
+      <Catalogo />
     </main>
   )
 }

@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import { HiMiniBars3, HiMiniXMark } from 'react-icons/hi2';
 import logo from "../../assets/d_logo.png";
+import { Link } from 'react-scroll'
 
-const Navbar = () => {
+export default function Navbar () {
   let links = [
-    {name: 'Home', link: '/'},
-    {name: 'Agende sua avaliação', link: 'https://wa.me/5521977696402'},
-    {name: 'Catalogo', link: '/catalogo'},
-    {name: 'Como chegar', link: '#'},
-    {name: 'Termos', link: '#'},
-    {name: 'Sobre', link: '#'}
+    {name: 'Home', link: '/', id: 'home', internal: true},
+    {name: 'Agende sua avaliação', link: 'https://wa.me/5521977696402', internal: false},
+    {name: 'Catalogo', link: '/catalogo', id: 'catalogo', internal: true},
+    {name: 'Como chegar', link: '#', internal: false},
+    {name: 'Termos', link: '#', internal: false},
+    {name: 'Sobre', link: '#', internal: false}
   ];
   const [open, setOpen] = useState(false);
   const handleButton = () => {
@@ -29,14 +30,36 @@ const Navbar = () => {
               {open ? <HiMiniXMark />: <HiMiniBars3 />}
             </div>
 
-            <ul className={`pb-12 absolute bg-white z-[-1] left-0 w-full pl-9 transition-all duration-400 ease-in ${open ? 'top-20': 'top-[-490px]'}
-              md:static md:flex md:items-center md:pb-0 md:z-auto md:w-auto md:pl-0`}>
+            <ul className={`bg-white pb-12 absolute z-[-1] left-0 h-80 pl-9 w-full transition-all duration-400 ease-in ${open ? 'top-20': 'top-[-490px]'}
+              md:static md:flex md:items-center md:pb-0 md:w-full md:h-fit md:pr-0`}>
               {
               links.map((link)=>(
-                <li className='md:ml-8 md:my-0 my-7'>
-                  <a 
-                  className='text-[16px] text-[#cba042] font-medium hover:text-[#6e7975]' 
-                  href={link.link}>{link.name}</a>
+                <li className='md:ml-8 md:my-0 my-7' key={link.id}>
+                  {link.internal ? (
+                    <Link
+                    className='text-[16px] text-[#cba042] font-medium hover:text-[#6e7975]' 
+                    href=''
+                    to={link.id}
+                    target={link.target}
+                    type={link.type}
+                    rel={link.rel}  
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    >
+                      {link.name}
+                    </Link>
+                  ):(
+                    <a href={link.link}
+                    className='text-[16px] text-[#cba042] font-medium hover:text-[#6e7975]'
+                    target={link.target}
+                    type={link.type}
+                    rel={link.rel}
+                    >
+                      {link.name}
+                    </a>
+                  )}
                 </li>
               ))
             }
@@ -45,5 +68,3 @@ const Navbar = () => {
     </div> 
   )
 }
-
-export default Navbar

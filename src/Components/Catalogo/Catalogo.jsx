@@ -20,11 +20,12 @@ export default function Catalogo() {
     ]
 
     return (
-        <section className='grid grid-cols-3 justify-center static p-2 pl-2 mt-8'>
+        <section className='grid grid-cols-1 md:grid-cols-4 justify-center items-center m-6
+        mt-12' id='catalogo'>
             {
                 links.map((link)=>(
-                    <div className='shadow-xl pt-2'>
-                        <img src={link.img} alt="" className='h-[525px] w-[275px]' />
+                    <div className='md:ml-7 mt-12 mb-8'>
+                        <img src={link.img} alt="" className='shadow-2xl w-96 md:h-[525px] md:w-[275px]' />
                     </div>
                 ))
             }
