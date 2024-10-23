@@ -6,7 +6,7 @@ import Homepage from './Components/Homepage/Homepage'
 export default function App () {
   return (
     <>
-    <div className='h-screen pt-14 space-y-20 bg-white'>
+    <div className='h-screen bg-white'>
       <Navbar />
       <Homepage />
       <Footer />
